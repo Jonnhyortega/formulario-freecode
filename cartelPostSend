@@ -1,0 +1,94 @@
+<div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4>gracias</h4>
+              <p>Muchas gracias por su colaboracion: <br>
+              Estamos trabajando para que el hospital<br> 
+               brinde un mejor servicio, de manera <br>
+               que para poder hacerlo, nos es fundamental<br> 
+                su opinion.
+              </p>
+          </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    margin-bottom:1px ;
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 80%;
+    max-width: 4100px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    width: 200px;
+    height: 260px;
+    margin-top: 20px;
+  }
+  
+  h4 {
+  
+  }
+  
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el botón de mostrar el modal */
+  #showModalBtn {
+    border: 1px solid black;
+    background-color: rgb(0, 120, 116);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+  }
+  
+  #showModalBtn:hover{
+    border: 5px solid black;
+    transform: scale(1, 1.2);
+  }
+
+
+  <script>// Obtener referencias a los elementos
+    const showModalBtn = document.getElementById("showModalBtn");
+    const modal = document.getElementById("myModal");
+    const closeBtn = document.getElementsByClassName("close")[0];
+    
+    // Mostrar el modal cuando se hace clic en el botón
+    showModalBtn.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+    
+    // Ocultar el modal cuando se hace clic en la "X"
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+    
+    // Ocultar el modal si se hace clic fuera de él
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+    </script>

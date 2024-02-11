@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Encuesta de calidad</title>
+  </head>
+  <body>
+    <section id="tituloPrincipal">
+      <h1 id="title">Hospital Piñero</h1>
+      <a class="logo" href="https://buenosaires.gob.ar/inicio/"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Logotipo_de_la_Ciudad_de_Buenos_Aires.svg"
+          alt="gcba"
+      /></a>
+    </section>
+
+    <span id="description"
+      >La siguiente encuesta fue elaborada para mejorar la calidad de atencion
+      en el hospital, es de caracter optativa, su opinion nos ayudara a mejorar
+      para poder brindar el servicio que el ciudadano merece.</span
+    >
+
+    <form class="form" id="survey-form">
+      <fieldset id="divLabels">
+        <label id="name-label" class="font-labels">
+          Nombre
+          <input type="text" id="name" required placeholder="Ingrese nombre" />
+        </label>
+
+        <label id="number-label" class="font-labels"
+          >Edad
+          <input
+            type="number"
+            id="number"
+            placeholder="Ingrese edad"
+            min="18"
+            max="100"
+          />
+        </label>
+
+        <label id="email-label" class="font-labels">
+          Correo
+          <input
+            required
+            type="email"
+            id="email"
+            placeholder="Ingrese correo"
+          />
+        </label>
+      </fieldset>
+
+      <fieldset id="divLabels">
+        <p class="font-labels">
+          Seleccione la especialidad con la que se atendio:
+        </p>
+        <select id="dropdown">
+          <option disabled selected>Seleccione una opcion</option>
+          <option value="traumatologia">Traumatologia</option>
+          <option value="nefrologia">Nefrologia</option>
+          <option value="urologia">Urologia</option>
+          <option value="sal r">Salud escolar</option>
+          <option value="clinica">Clinica</option>
+          <option value="geriatria">Geriatria</option>
+          <option value="diabetologia">Diabetologia</option>
+          <option value="adolescencia">Adolescencia</option>
+          <option value="gineco">Ginecologia</option>
+          <option value="neuro">Neurologia</option>
+          <option value="procto">Proctologia</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="divLabels">
+        <span class="font-labels">¿Como estuvo la atencion?</span>
+        <label>
+          <input
+            id="radio"
+            type="radio"
+            name="atencion"
+            value="muyBuena"
+            checked
+          />
+          Muy buena
+        </label>
+
+        <label>
+          <input
+            id="radio"
+            type="radio"
+            name="atencion"
+            value="buena"
+            checked
+          />
+          Buena
+        </label>
+
+        <label>
+          <input id="radio" type="radio" name="atencion" value="mala" checked />
+          Mala
+        </label>
+
+        <label>
+          <input
+            id="radio"
+            type="radio"
+            name="atencion"
+            value="muyMala"
+            checked
+          />
+          Muy mala
+        </label>
+      </fieldset>
+
+      <fieldset id="divLabels">
+        <span class="font-labels">¿En que cree usted que debemos mejorar?</span>
+        <label for="checkbox">
+          <input id="checkbox" type="checkbox" value="atencion-al-publico" />
+          Atencion al público
+        </label>
+
+        <label for="instalaciones">
+          <input id="instalaciones" type="checkbox" value="instalaciones" />
+          Instalaciones
+        </label>
+
+        <label for="turnos">
+          <input id="turnos" type="checkbox" value="sistema-de-turnos" />
+          Sistema de turnos
+        </label>
+
+        <label for="limpieza">
+          <input id="limpieza" type="checkbox" value="limpieza" /> Limpieza
+        </label>
+      </fieldset>
+
+      <fieldset class="font-labels" id="divLabels">
+        <span>
+          Cualquier comentario o sugerencia nos ayudara a encontrar el error y
+          solucionarlo para poder mejorar la calidad del servicio:</span
+        >
+        <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+      </fieldset>
+      <button id="submit" type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
